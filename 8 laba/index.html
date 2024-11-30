@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #controls {
+            margin-bottom: 10px;
+        }
+        #drawing-area {
+            border: 1px solid black;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <label for="shape">Select Shape: </label>
+        <select id="shape">
+            <option value="circle">Circle</option>
+            <option value="rectangle">Rectangle</option>
+        </select>
+    </div>
+    <canvas id="drawing-area" width="800" height="500"></canvas>
+    <script src="canvas-drawing.js"></script>
+</body>
+</html>

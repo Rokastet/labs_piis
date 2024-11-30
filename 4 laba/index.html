@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirts Store</title>
+    <style>
+        #products-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .shirt {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            width: 300px;
+        }
+        .shirt img {
+            max-width: 100%;
+        }
+        .shirt .details {
+            margin-top: 10px;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shirts Store</h1>
+    <div id="products-container"></div>
+
+    <script src="shirts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

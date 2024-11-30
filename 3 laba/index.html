@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirts Store</title>
+    <style>
+        #products-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .shirt {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            width: 300px;
+            
+        }
+        .shirt img {
+            max-width: 100%;
+        }
+        .shirt .details {
+            margin-top: 10px;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        #modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shirts Store</h1>
+    <div id="products-container"></div>
+
+    <!-- Модальное окно -->
+    <div id="modal">
+        <span id="close-modal" style="cursor: pointer; font-size: 20px; position: absolute; top: 10px; right: 10px;">&times;</span>
+        <div id="modal-content">
+            <h2 class="shirt-name__modal"></h2>
+            <img class="shirt-img__modal" style="max-width: 100%;">
+            <p class="shirt-description__modal"></p>
+            <p class="shirt-price__modal"></p>
+        </div>
+    </div>
+    <div id="modal-overlay"></div>
+
+    <script src="shirts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
